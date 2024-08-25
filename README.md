@@ -26,4 +26,5 @@ To create a simple Python program that calculates a student's average marks and 
 **Python:** Implemented using basic Python features like loops and conditionals.
 
 **Summary:**
+
 This project provides an easy way to calculate and grade student performance using Python, ideal for beginners to practice coding.
