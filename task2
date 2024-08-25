@@ -1,0 +1,51 @@
+An easy and simple way of calculating the grade of the students.
+
+while True:
+    # Ask for the student's name
+    print("Enter Student's Name: ")
+    student_name = input()
+
+    mark = []
+    tot = 0
+    
+    print("Enter Number of Subjects: ")
+    subNo = int(input())
+    
+    print("Enter Marks Obtained in " + str(subNo) + " Subjects: ")
+    for i in range(subNo):
+        mark.append(input())
+
+    for i in range(subNo):
+        tot = tot + int(mark[i])
+    
+    avg = tot / subNo
+
+    # Determine the grade based on average
+    if avg >= 91 and avg <= 100:
+        grade = "A1"
+    elif avg >= 81 and avg < 91:
+        grade = "A2"
+    elif avg >= 71 and avg < 81:
+        grade = "B1"
+    elif avg >= 61 and avg < 71:
+        grade = "B2"
+    elif avg >= 51 and avg < 61:
+        grade = "C1"
+    elif avg >= 41 and avg < 51:
+        grade = "C2"
+    elif avg >= 33 and avg < 41:
+        grade = "D"
+    elif avg >= 21 and avg < 33:
+        grade = "E1"
+    elif avg >= 0 and avg < 21:
+        grade = "E2"
+    else:
+        grade = "Invalid Input!"
+    
+    # Print results
+    print(f"{student_name}'s Grade = {grade}")
+
+    # Ask if the user wants to enter marks for another student
+    repeat = input("Do you want to enter marks for another student? (yes/no): ").lower()
+    if repeat != "yes":
+        break
